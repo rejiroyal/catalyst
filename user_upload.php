@@ -42,5 +42,5 @@ if (mysqli_connect_errno())
       }   
     }
   }  
-    echo "CSV File has been successfully uploaded to users table.";
+    echo "User with valid data from CSV File has been successfully uploaded to users table.";
 ?>
