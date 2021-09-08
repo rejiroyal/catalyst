@@ -32,8 +32,10 @@ if(empty($result)) {
 $file = fopen("users.csv", "r");
          while (($userData = fgetcsv($file, 10000, ",")) !== FALSE)
          {
-            $sql = "INSERT into tableName(name,email,address) values('$userData[0]','$userData[1]','$userData[2]')";
+            $sql = "INSERT into tableName(name,email,address) values('$userData[0]','ucwords($userData[1])','strtolower($userData[2])')";
+            //ucwords - in-built php function - convert words to capitalize
+            //strtolower - in-built php function convert the words to lowercase
             mysqli_query($con, $sql);
          }
          fclose($file);
-         echo "CSV File has been successfully Imported.";
+         echo "CSV File has been successfully uploaded to Users table.";
