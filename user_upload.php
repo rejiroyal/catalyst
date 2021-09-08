@@ -38,4 +38,4 @@ $file = fopen("users.csv", "r");
             mysqli_query($con, $sql);
          }
          fclose($file);
-         echo "CSV File has been successfully uploaded to Users table.";
+         echo "CSV File has been successfully uploaded to users table.";
