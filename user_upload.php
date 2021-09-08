@@ -35,7 +35,7 @@ if (mysqli_connect_errno())
       print "Invalid email found, insert to user table has been skipped";
     }
       else{
-        $sql = "INSERT into tableName(name,email,address) values('$userData[0]','ucwords($userData[1])','strtolower($userData[2])')";
+        $sql = "INSERT into USERS(name,email,address) values('$userData[0]','ucwords($userData[1])','strtolower($userData[2])')";
         //ucwords - in-built php function - convert words to capitalize
         //strtolower - in-built php function convert the words to lowercase
         mysqli_query($con, $sql);
